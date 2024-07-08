@@ -1,0 +1,14 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: jervis-whereami-google-cert-ingress
+  annotations:
+      kubernetes.io/ingress.global-static-ip-name: jervis-external-whereami-static-ip	
+  #   networking.gke.io/managed-certificates: jervis-google-managed-cert
+  #   kubernetes.io/ingress.class: "gce" 
+spec:
+  defaultBackend:
+    service:
+      name: whereami-whereami
+      port:
+        number: 80

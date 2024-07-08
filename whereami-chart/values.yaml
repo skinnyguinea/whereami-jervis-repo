@@ -1,0 +1,37 @@
+replicaCount: 1
+
+
+image:
+  repository: us-central1-docker.pkg.dev/burner-jerferre/sample/whereami
+  tag: v1.2.22
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {
+      kubernetes.io/ingress.global-static-ip-name: jervis-external-whereami-static-ip ,
+      networking.gke.io/managed-certificates: "jervis-google-managed-cert" , 
+      kubernetes.io/ingress.class: "gce"
+     }
+  hosts:
+    - host: whereami.jervisferreira.com
+      http: 
+        paths:
+        - path: /
+          pathType: Prefix
+          # backend: 
+          #    service:
+          #     name: whereami-whereami
+          #     port: 
+          #       number: 80     
+  # defaultBackend:
+  #  service:
+  #   name: 
+      
+  tls: []
+
+resources: {}

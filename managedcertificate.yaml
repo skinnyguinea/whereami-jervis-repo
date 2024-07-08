@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+   name: jervis-google-managed-cert
+spec: 
+    domains:
+    - whereami.jervisferreira.com   
