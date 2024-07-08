@@ -1,0 +1,4 @@
+{
+    "network": "jervis-standalone-vpc",
+    "region": "us-central1"
+}
