@@ -3,6 +3,6 @@ variable "project_id" {
 }
 
 variable "roles" {
-     
+    description = "Roles to be assigned to the SA" 
 }
 

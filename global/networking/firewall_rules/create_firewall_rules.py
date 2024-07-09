@@ -61,7 +61,7 @@ def main():
                     "ports": []
                 }
             }
-        ]
+            ] 
 
         for rule in firewall_rules:
             create_firewall_rule(
