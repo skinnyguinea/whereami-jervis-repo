@@ -1,3 +1,6 @@
+# whereami-jervis-repo
+This repo has been created to store terraform code and helm charts for whereami app
+
 This repository contains code for deploying a microservice namely, whereami to a GKE private cluster using Terraform.
 
 *****Deploy the infra using terraform****
