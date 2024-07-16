@@ -12,15 +12,7 @@ func TestTerraformBasicExample(t *testing.T) {
 	// Define the options for Terraform
 	terragruntOptions := &terraform.Options{
 		// Path to the Terraform code to be tested
-		TerraformDir: "../global/networking/vpc_subnets", // Adjust the path according to your repo structure
-
-		// // Variables to pass to our Terraform code using -var options
-		// Vars: map[string]interface{}{
-		//     "project_id": "burner-jerferre", // Add necessary variables
-		// },
-
-		// // Variables to pass to our Terraform code using -var-file options
-		// VarFiles: []string{"../global/networking/vpc_subnets/terraform.tfvars"},
+		TerraformDir: "../global/networking/vpc_subnets",
 	}
 
 	// Run `terragrunt apply` and fail the test if there are any errors
